@@ -102,10 +102,12 @@ box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     width: 100%;
     height: auto;
     padding: 5%;
+    align-items: center;
+    justify-content: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1.1fr 1.1fr 1fr;
-
+    grid-template-columns: 1.3fr 1.3fr 1fr ;
+    grid-template-rows: 1.1fr 1.1fr 1.1fr 1.1fr 1.1fr 1fr;
+    background: linear-gradient(#ffffff , #95c944 90%);
 }
 .card{
     position: relative;
@@ -207,4 +209,54 @@ border-radius: 10%;
     color: #ffffff;
     font-size: 18px;
     border-color:transparent;
+}
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    margin-bottom: 20px;
+    background:linear-gradient(#95c944 ,#ffffff 60%);
+}
+footer .f-logo img{
+    width: 55%;
+    margin-left: 10%;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+}
+footer .f-logo p{
+    text-align: justify;
+    line-height: 28px;
+    margin-left: 10%;
+    color: #1f6234;
+
+}
+footer .lien ul{
+    margin-top: 95%;
+    list-style: none;
+}
+footer .lien ul li a{
+    text-decoration: none;
+    line-height: 40px;
+    color: #1f6234;
+}
+footer .coverzone h2{
+    margin-top: 28%;
+    color: #1f6234;
+}
+footer .coverzone img{
+    margin-top: 2%;
+    width: 110%;
+}
+footer .media {
+    margin-left: 25%;
+    margin-top: 30%;
+}
+footer .media a img{
+    width: 20%;
+}
+footer .media p{
+    margin-top: 20%;
+    color: #1f6234;
+    text-align: justify;
+    line-height: 28px;
+    margin-right: 8%;
 }
