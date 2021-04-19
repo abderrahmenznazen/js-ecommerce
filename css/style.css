@@ -141,6 +141,7 @@ box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     margin-top: 10%;
     margin-left: 40%;
 }
+
 /****************menu************************/
 .menu{
     background-color: transparent;
@@ -154,7 +155,7 @@ box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     grid-template-rows: 1.1fr 1.1fr 1.1fr 1.1fr 1.1fr 1fr;
     background: linear-gradient(#ffffff , #95c944 90%);
 }
-.card{
+.card1{
     position: relative;
     height: 470px;
     width: 320px;
@@ -163,19 +164,19 @@ box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     transition: 0.4s linear;
     border-radius: 10%;
 }
-.card:hover{
+.card1:hover{
     box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.8);
 }
-.card:hover .image img{
+.card1:hover .image2 img{
     opacity: 0.8;
     transform: scale(1.1);
 }
-.card .image {
+.card1 .image2 {
 height: 400px;
 overflow: hidden;
 border-radius: 10%;
 }
-.card .image img{
+.card1 .image2 img{
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -272,52 +273,52 @@ border-radius: 10%;
     font-size: 18px;
     border-color:transparent;
 }
-footer{
+.ftr{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
     margin-bottom: 20px;
     background:linear-gradient(#95c944 ,#ffffff 60%);
 }
-footer .f-logo img{
+.ftr .f-logo img{
     width: 55%;
     margin-left: 10%;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.15);
 }
-footer .f-logo p{
+.ftr .f-logo p{
     text-align: justify;
     line-height: 28px;
     margin-left: 10%;
     color: #1f6234;
 
 }
-footer .lien ul{
+.ftr .lien ul{
     margin-top: 95%;
     list-style: none;
 }
-footer .lien ul li a{
+.ftr .lien ul li a{
     text-decoration: none;
     line-height: 40px;
     color: #1f6234;
 }
-footer .coverzone h2{
+.ftr .coverzone h2{
     margin-top: 28%;
     color: #1f6234;
 }
-footer .coverzone img{
+.ftr .coverzone img{
     margin-top: 2%;
     width: 110%;
 }
-footer .media {
+.ftr .media1 {
     margin-left: 25%;
     margin-top: 30%;
 }
-footer .media a img{
+.ftr .media1 a img{
     color: #1f6234 !important;
     width: 10%;
     margin-top: 30%;
 }
-footer .media p{
+.ftr .media1 p{
     margin-top: 0%;
     color: #1f6234;
     text-align: justify;
@@ -358,5 +359,15 @@ footer .media p{
     background-color: #1f6234;
     margin: 10px 02px;
     border: none;
+}
+.imgcrd{
+    width: 100%;
+    height: 100%;
+}
+.modalfooter .all{
+    background-color: red;
+}
+.modalfooter .all1{
+    background-color: #95c944;
 }
 /***********shop-cart*****/

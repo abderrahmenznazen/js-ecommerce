@@ -1,4 +1,81 @@
- /*var modalcard = document.querySelector('.modal-lien');
+let button = document.querySelectorAll('.button')
+let item =document.querySelector('.item-card')
+let total = []
+let totalCart = document.querySelector('.total')
+
+for (let i=0 ; i< button.length ; i++){
+    button[i].addEventListener('click', addTOCart)
+}
+
+function addTOCart(event){
+    let btn = event.target
+    let shop = btn.parentElement.parentElement.parentElement
+    let neme = shop.querySelector('.titre').innerText
+    let price = shop.querySelector('.price').innerText
+    let imgSrc = shop.querySelector('.image1').src
+console.log( neme , price, imgSrc)
+
+addToModal (neme,price, imgSrc)
+total.push(parseFloat(price))
+console.log(calculTotal())
+addQuantity()
+}
+
+
+function addToModal (neme ,price , imgSrc){
+    
+    item.innerHTML += `
+     <div class="row mt-3 ">
+     <div class="col-md-3">
+       <img src="${imgSrc}" class="imgcrd" >
+     </div>
+     <div class="col-md-2">
+       <strong>${neme}</strong>
+     </div>
+     <div class="col-md-3">
+       <strong>${price}</strong>
+     </div>
+     <div class="col-md-2">
+       <span>1</span>
+     </div>
+     <div class="col-md-2">
+     </div>
+   </div>
+     ` 
+}
+function addQuantity () {
+    totalCart.innerHTML = 
+    `<div class="pos">
+    
+    <h4>   ${calculTotal()} Dt</h4>
+    </div>`
+   
+  }
+
+function calculTotal(){
+
+    return total.reduce((a,b) => (a+b) )
+}
+document.querySelector('.all').addEventListener('click', purchaseClicked)
+function purchaseClicked() {
+  var cartItems = document.querySelector('.item-card')
+  while (cartItems.hasChildNodes()) {
+      cartItems.removeChild(cartItems.firstChild)
+
+  }
+  addQuantityRomove ()
+}
+
+
+function addQuantityRomove () {
+  totalCart.innerHTML = 
+  `<div class="pos">
+  <h4> <b>Total Price   </b>   0 Dt</h4>
+  </div>`
+ 
+}
+
+/*var modalcard = document.querySelector('.modal-lien');
  var modalbg = document.querySelector('.modalbg');
 
  modalcard.addEventListener('click',function () {
@@ -14,7 +91,7 @@
          $('.card .option').stop().slideDown;
      }
  }));*/
-let cart = document.querySelectorAll('.button');
+/*****let cart = document.querySelectorAll('.button');
 let products = [
     {
         name: 'Pasto Matto',
@@ -81,8 +158,7 @@ function setItemsToStorage(product){
 }
 localStorage.setItem('productsInCard', JSON.stringify(cartItems))
 }
-
-//==============================================================================
+============================================================================
 function total(product, event){
    let cartPrice = localStorage.getItem("total");
    
@@ -99,7 +175,7 @@ function total(product, event){
    }
 }
 
-//==================================================================
+=================================================================
 
 
 function displayCart(){
@@ -151,4 +227,4 @@ function displayCart(){
 
 
 onLoadShoppingCart();
-displayCart()
+displayCart()**/
